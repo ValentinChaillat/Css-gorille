@@ -1,0 +1,279 @@
+
+header{
+  padding-right: 10px;
+  position: fixed;
+  background-color: black;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+
+}
+body{
+  color: white;
+  background-color: black;
+  overflow-x: hidden;
+}
+footer{
+  background-color: black;
+  height: 200px;
+  border-top: 1px solid;
+  text-align: center;
+}
+
+/*--------------------------NavBar--------------------------------------------*/
+
+.logo{
+    font-size: 2em;
+}
+.menu-toggle .burger-breads span{
+    display: block;
+    width: 40px;
+    height: 4px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    position: relative;
+    background-color: white;
+    z-index: 1;
+}
+.menu-close .burger-breads span{
+    display: block;
+    width: 40px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    border-radius: 3px;
+    z-index: 1;
+    transform: rotate(45deg) translate(-2px,1px);
+    background: white;
+}
+.menu-close .burger-breads span:nth-child(2){
+    transform: rotate(135deg) translate(-6px, 9px);
+    }
+.menu-close .burger-breads span:nth-child(3){
+    opacity: 0;
+}
+.menu-toggle{
+    display: inline-block;
+    padding: 1em;
+}
+.main-menu{
+
+    left: -210px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    z-index: 999;
+    transition: left 0.3s cubic-bezier(0.87,-0.24, 0.36, 1.32);
+}
+.main-menu:target{
+    display: block;
+    left: 0;
+    outline: none;
+
+}
+.main-menu:target + .backdrop{
+    position: fixed;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    background: rgba(0, 0, 0, .6);
+    cursor: default;
+}
+.main-menu ul{
+    margin: 0;
+    padding-top: 60px;
+    width: 200px;
+    background-color: black;
+    min-height: 100%;
+    border-right: 1px solid white;
+}
+.main-menu a {
+
+    padding: 20px 0px;
+    text-align: center;
+    display: block;
+    line-height: 1em;
+    font-size: 1em;
+    color: white;
+    text-decoration: none;
+
+  }
+  nav ul li{
+    border-bottom: 1px solid white;
+  }
+  nav ul li:nth-child(1){
+    border-top: 1px white solid;
+  }
+
+  nav ul li:hover:nth-child(1){
+    background-color: #1C1C1C;
+  }
+  nav ul li:hover:nth-child(2){
+    background-color: #393939;
+  }
+  nav ul li:hover:nth-child(3){
+    background-color: #5B5B5B;
+  }
+  nav ul li:hover:nth-child(4){
+    background-color: #7F7F7F;
+  }
+  nav ul li:hover:nth-child(5){
+    background-color: #C6C6C6;
+  }
+
+  .main-menu .menu-close {
+    position: absolute;
+    left: 15px;
+    top:10px;
+  }
+
+/*------------------------PAGE HERO-------------------------------------------*/
+
+.hero{
+  background: url(../css/images/jungle.jpg);
+  background-size:cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  /* background-color: rgba(0, 0, 0, 0.3); */
+  text-align: center;
+  height: 870px;
+
+}
+h1{
+  font-size: 8em;
+  margin-bottom: 100px;
+  padding-top: 150px;
+}
+.description{
+  padding-bottom: 250px;
+  opacity: 0.6;
+}
+
+/*---------------------BLOC 2: columns----------------------------------------*/
+.bloc2{
+
+  color: white;
+  columns: 3;
+  padding-top: 150px;
+  padding-bottom: 250px;
+  width: 100%;
+}
+h2{
+  font-size: 2em;
+  column-span: all;
+  margin-bottom: 30px;
+}
+h3{
+  padding-top: 30px;
+  text-align: center;
+  font-size: 1.4em;
+  text-transform:uppercase;
+  margin-bottom: 30px;
+}
+.colonne{
+  padding-bottom: 50px;
+}
+
+/*---------------------Monkeys face: fixed image en fond----------------------*/
+
+.imagefix1{
+  background: url(../css/images/imagefixe.jpg);
+  background-size:cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 700px;
+}
+.imagefix2{
+  background: url(../css/images/imagefix2.jpg);
+  background-size:cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 700px;
+}
+
+/*---------------------BLOC 3: flex wrap--------------------------------------*/
+
+.bloc3{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  color: white;
+}
+.content{
+  flex-basis: 320px;
+  border: 1px solid white;
+  margin-top: 20px;
+}
+.bloc3,img {
+  margin: 30px 0px;
+}
+h4{
+  font-size: 1.2em;
+  text-align: center;
+}
+.lienpage2{
+  font-size: 2em;
+  color: white;
+  text-decoration: underline;
+  width: 100%;
+  float: left;
+  margin-top: 1em;
+}
+
+/*-----------------------BLOC 4-----------------------------------------------*/
+
+.bloc4{
+  width: 100%;
+  background-color: black;
+  display: flex;
+  padding-bottom: 100px;
+  padding-top: 100px;
+
+}
+.bloc4,figure{
+  padding-left: 10px;
+  margin-right: 20px;
+}
+.bloc4,figure,a{
+  text-decoration: none;
+  color: white;
+
+}
+
+/*--------------------------bloc-picture--------------------------------------*/
+
+.bloc-picture{
+  text-align: center;
+  width: 100%;
+  padding-bottom: 100px;
+  padding-top: 100px;
+  background-color: black;
+  height: 400px;
+  border-top: 2px solid white;
+
+}
+.picture{
+  position: absolute;
+  left: 50%;
+
+}
+
+/*--------------------------Page de gorille-----------------------------------*/
+
+.page1{
+  padding-top: 100px;
+  width:cover;
+  height: 600px;
+  background-color: black;
+  text-align: center;
+}
+
+/*-------------------Footer----------------------------------------------------*/
+
+.footer{
+  float: left;
+}
