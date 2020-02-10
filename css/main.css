@@ -56,15 +56,17 @@ footer{
     padding: 1em;
 }
 .main-menu{
+
     left: -210px;
     position: fixed;
     top: 0;
     bottom: 0;
     height: 100%;
     z-index: 999;
-    transition:  0.3s ease;
+    transition: left 0.3s cubic-bezier(0.87,-0.24, 0.36, 1.32);
 }
 .main-menu:target{
+    display: block;
     left: 0;
     outline: none;
 
@@ -131,7 +133,6 @@ footer{
 /*------------------------PAGE HERO-------------------------------------------*/
 
 .hero{
-
   background: url(../css/images/jungle.jpg);
   background-size:cover;
   background-attachment: fixed;
@@ -147,15 +148,8 @@ h1{
   padding-top: 150px;
 }
 .description{
-  border: 2px white solid;
-  padding: 20px;
-  margin: 0px 100px;
-  background-color: rgba(255, 255, 255, 0.1);
-  /* opacity: 0.6; */
-}
-.description:hover{
-  background-color: rgba(255, 255, 255, 0.2);
-  
+  padding-bottom: 250px;
+  opacity: 0.6;
 }
 
 /*---------------------BLOC 2: columns----------------------------------------*/
@@ -216,16 +210,14 @@ h3{
   transition: 0.3s ease;
 }
 .content figure figcaption h4{
-  margin-top: 120px;
-  font-size: 2em;
+  margin-top: 100px;
   transition: 1s;
 }
 .content figure figcaption p{
   opacity: 0;
-  margin-top: 100px;
+  margin-top: 120px;
   transition: 1s;
 }
-
 .content:hover{
   background-color: #393939;
   border: 1px solid #909090;
@@ -253,23 +245,24 @@ h4{
   margin-top: 1em;
 }
 
-/*-----------------------Page 2 grid: detail des gorilles-----------------------*/
+/*-----------------------BLOC 4-----------------------------------------------*/
 
 .bloc4{
   width: 100%;
   background-color: black;
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-
+  display: flex;
   padding-bottom: 100px;
   padding-top: 100px;
+
 }
 .bloc4,figure{
-
+  padding-left: 10px;
+  margin-right: 20px;
 }
 .bloc4,figure,a{
   text-decoration: none;
   color: white;
+
 }
 
 /*--------------------------bloc-picture--------------------------------------*/
@@ -303,28 +296,5 @@ h4{
 /*-------------------Footer----------------------------------------------------*/
 
 .footer{
-  position: absolute;
   float: left;
-}
-.logo-footer{
-  background: url(../css/images/pdp.JPG);
-  background-size:cover;
-  background-position: center;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 100px;
-  width: 100px;
-  border-radius: 50px;
-
-}
-.logo-footer:hover{
-  animation: rotation 2s ease infinite;
-
-
-}
-@keyframes rotation {
-  20%{border-radius: 50px;}
-  50%{border-radius: 20px;}
-  80%{border-radius: 50px;}
 }
